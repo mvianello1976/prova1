@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import "@dasundev/livewire-dropzone-styles";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+[x-cloak] {
+    display: none;
+}
+
+/* Air Datepicker */
+.air-datepicker:not(.-inline-) {
+    @apply !min-w-[375px] !-translate-y-2 !shadow-none !rounded-md !border-0 ring-1 ring-e2eaeb
+}
+
+.air-datepicker--pointer {
+    @apply hidden
+}
+
+.-inline-.air-datepicker {
+    @apply w-[calc(100%_-_5px)] mx-auto border-0
+}
+
+.air-datepicker-nav--title {
+    @apply font-semibold !text-ffa368
+}
+
+.air-datepicker-body--day-name {
+    @apply !text-627277
+}
+
+.air-datepicker-cell.-day- {
+    @apply text-0d171a
+}
+
+.air-datepicker-cell.-day-.-current- {
+    @apply !text-ffa14a !font-bold
+}
+
+.air-datepicker-cell.-day-.-range-from-,
+.air-datepicker-cell.-day-.-range-to-,
+.air-datepicker-cell.-day-.-selected- {
+    @apply !bg-ffa14a !border-0 !text-white
+}
+
+.air-datepicker-body--cells.-days- {
+    grid-auto-rows: 52px !important;
+}
+
+.air-datepicker-cell.-day-.-selected-:not(.-range-from-, .-range-to-),
+.air-datepicker-cell.-day-.-focus-:not(.-range-from-, .-range-to-, .-in-range-) {
+    @apply rounded-full
+}
+
+.air-datepicker-cell.-day-.-focus-.-range-from-,
+.air-datepicker-cell.-day-.-selected-.-range-from- {
+    @apply !rounded-l-full
+}
+
+.air-datepicker-cell.-day-.-focus-.-range-to-,
+.air-datepicker-cell.-range-to- {
+    @apply !rounded-r-full
+}
+
+.air-datepicker:not(.-disabled-range-) .air-datepicker-cell.-day-.-in-range- {
+    @apply !bg-ffbb7c/20
+}
+
+.air-datepicker .air-datepicker-cell.-day-.-disabled- {
+    @apply !cursor-not-allowed
+}
+
+/*.air-datepicker.-disabled-range- {*/
+/*    --adp-cell-background-color-in-range: #eeeeee !important;*/
+/*    --adp-cell-background-color-selected: #d0d0d0 !important;*/
+/*}*/
